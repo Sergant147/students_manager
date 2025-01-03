@@ -21,17 +21,17 @@ public class Main {
                 name = scanner.nextLine();
                 System.out.print("Information: ");
                 information = scanner.nextLine();
-                studentsArray = studentsHandler.addStudent(studentsArray, name, information);
+                studentsArray = studentsHandler.addStudent( name, information);
             } else if (command.equals("remove")) {
                 System.out.print("Name: ");
                 name = scanner.nextLine();
-                studentsArray = studentsHandler.removeStudent(studentsArray, name);
+                studentsArray = studentsHandler.removeStudent(name);
             } else if (command.equals("edit")) {
                 System.out.print("Name: ");
                 name = scanner.nextLine();
                 System.out.print("Information: ");
                 information = scanner.nextLine();
-                studentsArray = studentsHandler.editStudent(studentsArray, name, information);
+                studentsArray = studentsHandler.editStudent(name, information);
             } else if (command.equals("get_all")) {
                 studentsHandler.showStudents(studentsArray);
             } else if (command.equals("clear")) {
