@@ -1,5 +1,6 @@
 public class StudentCommandHanndler {
     public StudentCommandHanndler() {
+        ArrayList<Student> studentsArray = new ArrayList<Student>();
     }
 
     public void showStudent(Student student) {

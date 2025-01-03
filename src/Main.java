@@ -3,7 +3,7 @@ package programs;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Mains {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Student> studentsArray = new ArrayList<Student>();
@@ -35,7 +35,7 @@ public class Mains {
             } else if (command.equals("get_all")) {
                 studentsHandler.showStudents(studentsArray);
             } else if (command.equals("clear")) {
-                studentsArray = new ArrayList<Student>();
+                studentsHandler = new StudentsCommandHandler();
             } else {
                 System.out.print("Name: ");
                 name = scanner.nextLine();
