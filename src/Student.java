@@ -1,9 +1,9 @@
 class Student {
-    private String NameID;
+    private String nameID;
     private String information;
 
     public Student(String name, String information) {
-        this.NameID = name;
+        this.nameID = name;
         this.information = information;
     }
 
@@ -12,10 +12,10 @@ class Student {
     }
 
     public String getName() {
-        return this.name;
+        return this.nameID;
     }
 
     public void setInformation(String name) {
-        this.name = name;
+        this.name = nameID;
     }
 }
