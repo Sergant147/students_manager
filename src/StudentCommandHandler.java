@@ -9,25 +9,25 @@ public class StudentCommandHanndler {
         System.out.println();
     }
 
-    public void showStudents(ArrayList<Student> students) {
-        for (Student student : students) {
+    public void showStudents() {
+        for (Student student : this.studentsArray) {
             showStudent(student);
         }
     }
 
-    public ArrayList<Student> removeStudent(ArrayList<Student> students, String name) {
-        students.removeIf(student -> student.NameID.equals(name));
+    public ArrayList<Student> removeStudent(String name) {
+        this.studentsArray.removeIf(student -> student.NameID.equals(name));
         return students;
     }
 
-    public ArrayList<Student> addStudent(ArrayList<Student> students, String name, String inf) {
+    public ArrayList<Student> addStudent(String name, String inf) {
         Student newOne = new Student(name, inf);
-        students.add(newOne);
+        this.studentsArray.add(newOne);
         return students;
     }
 
-    public ArrayList<Student> editStudent(ArrayList<Student> students, String name, String inf) {
-        for (Student student : students) {
+    public ArrayList<Student> editStudent(String name, String inf) {
+        for (Student student : this.studentsArray) {
             if (student.NameID.equals(name)) {
                 student.setInformation(information);
             }
